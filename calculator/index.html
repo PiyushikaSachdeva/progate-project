@@ -1,0 +1,61 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="viewpoint" contents="width+device-width">
+	<title>Calculator</title>
+	<link rel="stylesheet" href="stylesheet.css">
+	<script>
+		function myclick(v){
+		forms.display.value+=v;
+		}
+		function equalto(){
+		forms.display.value=eval(forms.display.value);
+
+		}
+
+		function ac(){
+		forms.display.value='';
+		}
+	</script>
+</head>
+<body>
+	<div class="calculator">
+		<form name="forms">
+		<input type="text" class="calculator-screen" name="display" value="0">
+		<div class="calculator-keys" >
+			<div class="row">
+				<input type="button" class="all-clear" value="AC" onclick="ac()">
+				<input type="button" class="percentage" value="%" onclick="myclick('%')">
+				<input type="button" class="operator" value="&divide;" onclick="myclick('/')">
+			</div>
+
+			<div class="row">
+				<input type="button" class="number" value="7" onclick="myclick('7')">
+				<input type="button" class="number" value="8" onclick="myclick('8')">
+				<input type="button" class="number" value="9" onclick="myclick('9')">
+				<input type="button" class="operator" value="&times;" onclick="myclick('*')">
+			</div>
+
+			<div class="row">
+				<input type="button" class="number" value="4" onclick="myclick('4')">
+				<input type="button" class="number" value="5" onclick="myclick('5')">
+				<input type="button" class="number" value="6" onclick="myclick('6')">
+				<input type="button" class="operator" value="-" onclick="myclick('-')">
+			</div>
+
+			<div class="row">
+				<input type="button" class="number" value="1" onclick="myclick('1')">
+				<input type="button" class="number" value="2" onclick="myclick('2')">
+				<input type="button" class="number" value="3" onclick="myclick('3')">
+				<input type="button" class="operator" value="+" onclick="myclick('+')">
+			</div>
+
+			<div class="row">
+				<input type="button" class="number zero-btn" value="0" onclick="myclick('0')">
+				<input type="button" class="decimal" value="." onclick="myclick('.')">
+				<input type="button" class="equal-sign" value="=" onclick="equalto()">
+			</div>
+		</div>
+	</div>
+	</form>
+</body>
+</html>
